@@ -1,7 +1,6 @@
 import discord
 import os
 import random
-from keep_alive import keep_alive
 
 client = discord.Client() #register a client
 
@@ -78,5 +77,4 @@ async def on_message(message):
 def gen_from(ref_list):
   return ref_list[random.randint(0,len(ref_list)-1)]
 
-keep_alive()
 client.run(os.environ['envtoken'])
